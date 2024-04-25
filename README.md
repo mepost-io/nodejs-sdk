@@ -1,4 +1,4 @@
-mepost-sdk
+mepost nodejs sdk
 ==========
 
 The `mepost-sdk` is a Node.js library designed to simplify interactions with the Mepost API. It provides convenient methods to send and manage messages efficiently. This SDK is perfect for developers looking to integrate Mepost messaging capabilities into their applications.
