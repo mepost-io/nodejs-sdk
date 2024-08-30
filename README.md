@@ -1,4 +1,4 @@
-mepost-sdk
+mepost nodejs sdk
 ==========
 
 The `mepost-sdk` is a Node.js library designed to simplify interactions with the Mepost API. It provides convenient methods to send and manage messages efficiently. This SDK is perfect for developers looking to integrate Mepost messaging capabilities into their applications.
@@ -36,29 +36,17 @@ const client = mepost.auth('your_api_key_here');
 
 // Send an email
 const emailData = {
-  "customization": {},
-  "from_email": "string",
-  "from_name": "string",
-  "headers": {},
-  "html": "string",
-  "ipGroup": "string",
-  "return_path": "string",
-  "scheduledAt": "string",
-  "subject": "string",
-  "text": "string",
-  "to": [
-    {
-      "customization": {},
-      "email": "string",
-      "name": "string",
-      "type": "string"
-    }
-  ]
+    "from_email": "info@example.com",
+    "from_name": "Example Company",
+    "html": "This is a test email sent from the Mepost Go SDK.",
+    "subject": "Example Subject",
+    "to": [
+        { "email": "recipient1@example.com" },
+        { "email": "recipient2@example.com" }
+    ]
 };
 
-client.sendEmail(emailData)
-    .then(response => console.log("Email sent successfully:", response))
-    .catch(error => console.error("Failed to send email:", error));`
+await client.sendEmail(emailData)
 ```
 API Methods
 -----------
